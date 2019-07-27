@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureNotepad", "SecureNotepad\SecureNotepad.csproj", "{BE82D509-3E8E-4587-A757-D41F94BD4D2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureNotePad.Core", "SecureNotePad.Core\SecureNotePad.Core.csproj", "{F8948079-258D-4669-B117-A85553809517}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE82D509-3E8E-4587-A757-D41F94BD4D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE82D509-3E8E-4587-A757-D41F94BD4D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE82D509-3E8E-4587-A757-D41F94BD4D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE82D509-3E8E-4587-A757-D41F94BD4D2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8948079-258D-4669-B117-A85553809517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8948079-258D-4669-B117-A85553809517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8948079-258D-4669-B117-A85553809517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8948079-258D-4669-B117-A85553809517}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88C04DF0-AB3B-426E-96F8-AD5F7AFE90E8}
+	EndGlobalSection
+EndGlobal
