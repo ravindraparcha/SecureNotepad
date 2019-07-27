@@ -194,6 +194,7 @@
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
             this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.selectAllToolStripMenuItem.Text = "Select All";
+            this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.SelectAllToolStripMenuItem_Click);
             // 
             // formatToolStripMenuItem
             // 
@@ -207,14 +208,14 @@
             // wordwrapToolStripMenuItem
             // 
             this.wordwrapToolStripMenuItem.Name = "wordwrapToolStripMenuItem";
-            this.wordwrapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.wordwrapToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.wordwrapToolStripMenuItem.Text = "Word Wrap";
             this.wordwrapToolStripMenuItem.Click += new System.EventHandler(this.WordwrapToolStripMenuItem_Click);
             // 
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.fontToolStripMenuItem.Text = "Font";
             // 
             // aboutToolStripMenuItem

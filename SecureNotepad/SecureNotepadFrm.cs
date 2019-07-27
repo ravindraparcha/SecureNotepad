@@ -23,5 +23,11 @@ namespace SecureNotepad
         {
 
         }
+
+        private void SelectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.notepadTxtBox.SelectAll();
+            this.notepadTxtBox.Focus();
+        }
     }
 }
