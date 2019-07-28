@@ -8,9 +8,14 @@ namespace SecureNotePad.Core
 {
     public sealed class Constants
     {
-        public const string appTitle = "Secure Notepad - Ravindra Parcha";
-        public const string browseFiles = "Browse Files";
-        public const string openDlgFilter = "Secure txt files(*.stxt)| *.txt | All files(*.*) | *.*";
+        public const string appName = "Secure Notepad";
+        public const string author = "Ravindra Parcha";
+        public const string browseFile = "Browse File";
+        public const string filter = "Secure txt files(*.stxt)| *.txt | All files(*.*) | *.*";
         public const string defaultExtension = "stxt";
+        public const string saveFile = "Save File";
+
+        // Messages
+        public const string noDataToSave = "You have no data to save.";
     }
 }
