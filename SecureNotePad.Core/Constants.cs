@@ -14,8 +14,12 @@ namespace SecureNotePad.Core
         public const string filter = "Secure txt files(*.stxt)| *.txt | All files(*.*) | *.*";
         public const string defaultExtension = "stxt";
         public const string saveFile = "Save File";
-
+        
         // Messages
         public const string noDataToSave = "You have no data to save.";
+
+        //Action
+        public const string search = "Search";
+        public const string replace = "Replace";
     }
 }

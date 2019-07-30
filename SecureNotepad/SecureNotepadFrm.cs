@@ -18,6 +18,7 @@ namespace SecureNotepad
         #region Variables        
         private ReadWriteOperation _readWriteOperation;
         private string _currentFilePath = string.Empty;
+        private string _textToFind = string.Empty;
         #endregion
         public SecureNotepadFrm()
         {
@@ -28,7 +29,14 @@ namespace SecureNotepad
 
         private void WordwrapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (textwrapToolStripMenuItem.Checked)
+            {
+                notepadTxtBox.WordWrap = true;
+            }
+            else
+            {
+                notepadTxtBox.WordWrap = false;
+            }
         }
 
         private void SelectAllToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,6 +127,94 @@ namespace SecureNotepad
             catch (Exception ex)
             {
                 showMessageBox(string.Concat("Following error occurred", "\n", ex.Message), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UndoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notepadTxtBox.Undo();
+        }
+
+        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notepadTxtBox.Copy();
+        }
+
+        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notepadTxtBox.Paste();
+        }
+
+        private void RedoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notepadTxtBox.Redo();
+        }
+
+        private void ClearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notepadTxtBox.Clear();
+        }
+
+        private void UndoClearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notepadTxtBox.ClearUndo();
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notepadTxtBox.Cut();
+        }
+
+        private void FontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult fontDialog = fontDlg.ShowDialog();
+            if(fontDialog == DialogResult.OK)
+            {
+                notepadTxtBox.Font = fontDlg.Font;
+            }
+        }
+
+        private void BackgroundColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            if(colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                notepadTxtBox.BackColor = colorDialog.Color;
+            }
+        }
+
+        private void FindToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OperationActionPopup(ActionEnum.Search.ToString());
+            searchReplaceText(ActionEnum.Search);
+
+        }
+
+        private void OperationActionPopup(string actionName)
+        {
+            FindReplaceFrm findReplaceFrm = new FindReplaceFrm(actionName);
+            findReplaceFrm.ShowDialog();           
+            _textToFind = findReplaceFrm.operationText;            
+        }
+
+        private void ReplaceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OperationActionPopup(ActionEnum.Replace.ToString());
+        }
+
+        private void searchReplaceText(ActionEnum actionEnum)
+        {
+            int index = 0;            
+            while(index < notepadTxtBox.Text.LastIndexOf(_textToFind))
+            {
+                notepadTxtBox.Find(_textToFind, index, notepadTxtBox.TextLength, RichTextBoxFinds.None);
+                notepadTxtBox.SelectionBackColor = Color.Yellow;
+                index = notepadTxtBox.Text.IndexOf(_textToFind, index) + 1;
             }
         }
     }

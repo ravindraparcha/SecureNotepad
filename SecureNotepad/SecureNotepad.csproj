@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindReplaceFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindReplaceFrm.Designer.cs">
+      <DependentUpon>FindReplaceFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecureNotepadFrm.cs">
@@ -57,6 +63,9 @@
     <Compile Include="SecureNotepadFrm.Designer.cs">
       <DependentUpon>SecureNotepadFrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FindReplaceFrm.resx">
+      <DependentUpon>FindReplaceFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
